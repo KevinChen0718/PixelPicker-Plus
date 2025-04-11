@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PixelPicker Plus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PixelPicker Plus</h1>
+    
+    <div class="color-selection">
+      <div class="preview-section">
+        <div class="color-preview" id="colorPreview"></div>
+        <p class="section-label">Current Color</p>
+      </div>
+      
+      <div class="picker-section">
+        <p class="section-label">Pick Color</p>
+        <div id="eyedropper" class="eyedropper-tool">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+            <path d="M20.71 5.63l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-3.12 3.12-1.93-1.93-1.41 1.41 1.42 1.42L3 18.25V21h2.75l11.94-11.94 1.42 1.42 1.41-1.41-1.93-1.93 3.12-3.12c.4-.4.4-1.03.01-1.42zM6.92 19L5 17.08l8.06-8.06 1.92 1.92L6.92 19z" fill="#333"/>
+          </svg>
+        </div>
+        <input type="hidden" id="colorPicker" value="#3366ff">
+      </div>
+    </div>
+    
+    <div class="color-info">
+      <div class="color-format">
+        <label for="hexColor">HEX:</label>
+        <input type="text" id="hexColor" readonly>
+        <button id="copyHex" class="copy-btn">Copy</button>
+      </div>
+      
+      <div class="color-format">
+        <label for="rgbColor">RGB:</label>
+        <input type="text" id="rgbColor" readonly>
+        <button id="copyRgb" class="copy-btn">Copy</button>
+      </div>
+      
+      <div class="color-format">
+        <label for="hslColor">HSL:</label>
+        <input type="text" id="hslColor" readonly>
+        <button id="copyHsl" class="copy-btn">Copy</button>
+      </div>
+    </div>
+    
+    <div class="saved-colors">
+      <h3>Saved Colors <span class="color-count">(0/15)</span></h3>
+      <div id="savedColorsList" class="color-list">
+        <!-- 15 empty slots by default -->
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+        <div class="empty-slot" title="Empty"></div>
+      </div>
+      <div class="color-actions">
+        <button id="saveColor" class="save-btn">Save Current Color</button>
+        <button id="clearColors" class="clear-btn">Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
