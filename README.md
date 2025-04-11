@@ -51,7 +51,7 @@ Contributions are welcome! Feel free to submit a pull request.
 
 ## Credits
 
-Developed with ❤️
+Developed with ❤ Cursor!!
 
 ## Support
 
